@@ -1,11 +1,16 @@
-package com.example.recipesapp
+package com.example.recipesapp.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import com.example.recipesapp.R
 import com.example.recipesapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     companion object {
         private val TAG: String? = MainActivity::class.java.canonicalName
     }
@@ -14,10 +19,31 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.home -> {
+                    findNavController(R.id.nav_host_fragment).navigate(R.id.homeFragment)
+                    true
+                }
+
+                R.id.recipes -> {
+                    findNavController(R.id.nav_host_fragment).navigate(R.id.recipesFragment)
+                    true
+                }
+
+                R.id.profile -> {
+                    findNavController(R.id.nav_host_fragment).navigate(R.id.profileFragment)
+                    true
+                }
+
+                else -> false
+            }
+
+        }
+
         Log.d(TAG, "onCreate: MainActivity created.")
 
-        val extra = intent.getStringExtra("message")
-        binding.welcomeText.text = extra
     }
 
     override fun onStart() {
