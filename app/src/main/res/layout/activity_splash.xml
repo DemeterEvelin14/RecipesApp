@@ -18,7 +18,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="206dp"
         android:layout_height="200dp"
-        app:cardCornerRadius="200dp"
+        app:cardCornerRadius="235dp"
         app:cardElevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
+            android:background="@color/white"
             android:cropToPadding="true"
             android:src="@drawable/recipe_hub"
             android:visibility="visible" />
