@@ -1,15 +1,20 @@
 package com.example.recipesapp.repository.recipe.model
 
 data class RecipeDTO(
-    val id: Int,
+    val id: Long?,
     val name: String,
-    val description: String? = "Default"
+    val description: String? = "Default",
+    val user_ratings: UserRatings?,
+    val price: Price?
 )
 
 fun RecipeDTO.toModel(): RecipeModel {
     return RecipeModel(
+        id = this.id,
         name = this.name,
-        description = this.description
+        description = this.description,
+        user_ratings = this.user_ratings,
+        price = this.price
     )
 }
 
