@@ -23,7 +23,7 @@ class RecipesListAdapter(
 
         init {
             binding.root.setOnClickListener {
-                val position = adapterPosition
+                val position = this.absoluteAdapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     onItemClickListener(recipesList[position])
                 }

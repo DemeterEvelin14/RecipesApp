@@ -52,6 +52,7 @@ dependencies {
 
     //bottom navigation
     implementation ("com.google.android.material:material:1.12.0-alpha01")
+    implementation("com.google.android.material:material:1.10.0")
 
     //gson
     implementation ("com.google.code.gson:gson:2.9.0")

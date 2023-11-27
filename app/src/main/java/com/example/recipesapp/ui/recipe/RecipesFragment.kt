@@ -36,6 +36,7 @@ class RecipesFragment : Fragment() {
 
         recipesAdapter = RecipesListAdapter(ArrayList(), requireContext()) { recipe ->
             recipeDetailViewModel.setSelectedRecipe(recipe)
+            //kijavitani -> id-t kuld at csak
             findNavController().navigate(R.id.action_recipesFragment_to_recipeDetailFragment)
         }
 
