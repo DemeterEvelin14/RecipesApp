@@ -15,10 +15,6 @@ class RecipesListAdapter(
     private var onItemClickListener: (RecipeModel) -> Unit
 ) : RecyclerView.Adapter<RecipesListAdapter.RecipeItemViewHolder>() {
 
-    fun setOnItemClickListener(listener: (RecipeModel) -> Unit) {
-        onItemClickListener = listener
-    }
-
     inner class RecipeItemViewHolder(binding: RecipeListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         val recipeName = binding.recipeName

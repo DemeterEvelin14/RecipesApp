@@ -1,5 +1,6 @@
 package com.example.recipesapp.ui.recipe.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.recipesapp.repository.recipe.model.RecipeModel
 
