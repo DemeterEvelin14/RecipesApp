@@ -19,21 +19,21 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.recipesapp.ui.profile.ProfileFragment"
+        android:name="com.example.recipesapp.ui.profile.fragment.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
+        tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_profileFragment_to_newRecipeFragment"
             app:destination="@id/newRecipeFragment" />
     </fragment>
     <fragment
         android:id="@+id/recipeDetailFragment"
-        android:name="com.example.recipesapp.ui.recipe.RecipeDetailFragment"
+        android:name="com.example.recipesapp.ui.recipe.fragment.RecipeDetailFragment"
         android:label="fragment_recipe_detail"
         tools:layout="@layout/fragment_recipe_detail" />
     <fragment
         android:id="@+id/recipesFragment"
-        android:name="com.example.recipesapp.ui.recipe.RecipesFragment"
+        android:name="com.example.recipesapp.ui.recipe.fragment.RecipesFragment"
         android:label="fragment_recipes"
         tools:layout="@layout/fragment_recipes">
         <action
@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/newRecipeFragment"
-        android:name="com.example.recipesapp.ui.profile.NewRecipeFragment"
+        android:name="com.example.recipesapp.ui.profile.fragment.NewRecipeFragment"
         android:label="fragment_new_recipes"
         tools:layout="@layout/fragment_new_recipe" />
     <activity
@@ -55,4 +55,7 @@
         android:name="com.example.recipesapp.activities.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/myRecipeDetail"
+        android:name="com.example.recipesapp.ui.profile.fragment.MyRecipeDetailsFragment" />
 </navigation>

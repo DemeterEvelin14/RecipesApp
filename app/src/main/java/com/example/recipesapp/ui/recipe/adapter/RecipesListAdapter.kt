@@ -20,7 +20,7 @@ class RecipesListAdapter(
         val recipeName = binding.recipeName
         val recipeImage = binding.recipeImage
         val recipeRating = binding.ratingNumber
-
+                                                                    
         init {
             binding.root.setOnClickListener {
                 val position = this.absoluteAdapterPosition
