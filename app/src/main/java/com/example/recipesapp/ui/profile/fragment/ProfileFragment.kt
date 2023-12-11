@@ -35,7 +35,7 @@ class ProfileFragment : Fragment() {
 
         recipesAdapter = MyRecipesAdapter(emptyList(), requireContext()) { selectedRecipe ->
             val bundle = Bundle()
-            bundle.putString("recipeId", selectedRecipe.id.toString())
+            viewModel.setSelectedRecipe(selectedRecipe)
             findNavController().navigate(R.id.myRecipeDetail, bundle)
         }
 

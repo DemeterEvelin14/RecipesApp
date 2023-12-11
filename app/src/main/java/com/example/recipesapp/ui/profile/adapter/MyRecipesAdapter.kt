@@ -2,13 +2,14 @@ package com.example.recipesapp.ui.profile.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View.OnLongClickListener
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recipesapp.databinding.RecipeListItemBinding
 import com.example.recipesapp.repository.recipe.model.MyRecipeModel
 
 class MyRecipesAdapter(
-    private var myRecipesList: List<MyRecipeModel>,
+    var myRecipesList: List<MyRecipeModel>,
     private val context: Context?,
     private val onItemClickListener: ((MyRecipeModel) -> Unit)? = null
 ) : RecyclerView.Adapter<MyRecipesAdapter.RecipeItemViewHolder>() {
@@ -24,6 +25,7 @@ class MyRecipesAdapter(
                     onItemClickListener?.invoke(myRecipesList[position])
                 }
             }
+
         }
     }
 
